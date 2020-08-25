@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> profile </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css" />
+    <link rel='stylesheet' type="text/css" href="../css/styles.css">
+
+    <script src="../js/profile.js"></script>
+</head>
+
+<body>
+    <div class=" vertical-center">
+        <div class="container  pt-5">
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="card">
+
+                        <div class="card-body my_card">
+                            <div class="card-title  text-center tittle mb-4">
+                                <div class="d-flex justify-content-start">
+
+                                    <div class="userData offset-5">
+
+                                        <div class="d-block" style="font-size: 3rem; font-weight: bold" id="first"> </div>
+
+                                    </div>
+                                    <div class="ml-auto">
+                                        <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-8 offset-sm-4">
+                                    <div class="tab-content ml-1" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+
+                                            <div class="row pt-3">
+                                                <div class="col-sm-3  size_13">
+                                                    <label cl class="font-weight-bold">First Name</label>
+                                                </div>
+                                                <div class="col-sm-2  size_13">
+                                                    <input id="Fname" type="text" disabled="">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="row pt-3">
+                                                <div class="col-sm-3   size_13">
+                                                    <label class="font-weight-bold">Last Name</label>
+                                                </div>
+                                                <div class="col-sm-2  size_13">
+                                                    <input id="Lname" type="text" disabled="">
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row pt-3">
+                                                <div class="col-sm-3  size_13">
+                                                    <label class="font-weight-bold">Birth Date</label>
+                                                </div>
+                                                <div class="col-sm-2 size_13">
+                                                    <input id="birth" type="text" disabled="">
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row pt-3">
+                                                <div class="col-sm-3  size_13">
+                                                    <label class="font-weight-bold">Email </label>
+                                                </div>
+                                                <div class="col-sm-2 size_13">
+                                                    <input id="email" type="text" disabled="">
+                                                </div>
+                                            </div>
+
+                                            <div class="row pt-3">
+                                                <div class="col-sm-3  size_13">
+                                                    <label class="font-weight-bold">phone</label>
+                                                </div>
+                                                <div class="col-sm-2 size_13">
+                                                    <input id="phone" type="text" disabled="">
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-10 offset-sm-2 ">
+
+                                    <div class="row pt-2">
+                                        <div class="col-sm-3 size_13">
+                                            <button id="edit" type="button" class=" edit_btn1 btn  btn-block edit_btn1 edit" value="sign">Edit</button>
+
+                                        </div>
+                                        <div class="col-sm-3  size_13">
+                                            <button type="button" id="save" class=" edit_btn1 btn  btn-block edit_btn1 save" disabled value="sign">Save </button>
+
+                                        </div>
+                                        <div class="col-sm-3 px-2  size_13">
+                                            <button type="button" id="change_password" data-toggle="modal" data-target="#exampleModal" class="  btn  btn-block edit_btn1 change_password " value="sign">Change Password</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class=" text-center change_password_note"></div>
+                    <div class=" text-center change_password_error"></div>
+                    <div class="form-group col-8">
+
+                        <label for="password1">Old Password</label>
+                        <input type="password" class="form-control" id="password1" name="password">
+
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="password1">New Password</label>
+                        <input type="password" class="form-control" id="password2" name="password">
+
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="confirm">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirm" name="confirm" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary " id="edit_password">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

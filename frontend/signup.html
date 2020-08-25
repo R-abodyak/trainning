@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Sign up form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type="text/css" href="../css/bootstrap.css">
+    <link rel='stylesheet' type="text/css" href="../css/jquery-ui.css">
+    <link rel='stylesheet' type="text/css" href="../css/jquery-ui.structure.css">
+    <link rel='stylesheet' type="text/css" href="../css/jquery-ui.theme.css">
+    <link rel='stylesheet' type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container padding-top-3rem">
+        <div class="row ">
+            <div class="col-md-6 col-sm-10  offset-md-3 offset-sm-1    py-5 px-5 sign_color custom_container">
+                <form onsubmit="return validateForm();">
+                    <h1 class="text-center pb-4"> Sign Up </h1>
+
+                    <div class="success text-center m-2" id="sucesse_message"> </div>
+                    <div class="error red text-center m-2" id="erorr_message"> </div>
+                    <div class="row ">
+                        <div class="form-group col-6">
+                            <label for="first-name">First Name   </label>
+                            <input type="text" class="form-control" id="first-name" name="first" onclick="hide_comment(this.nextElementSibling)">
+
+                            <small id="invalid_name1" class="form-text red error_input">  First name is required </small>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="last-name">Last Name </label>
+                            <input type="text" class="form-control" id="last-name" name="last" onclick="hide_comment(this.nextElementSibling)">
+
+                            <small id="invalid_name2" class="form-text red  error_input"> Last name is required </small>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row ">
+
+                        <div class="form-group col-6">
+                            <label for="birthday">Birthday</label>
+                            <input class="form-control" id="birthday" autocomplete="off" name="birthday" PLACEHOLDER="enter to select date" onclick="hide_comment(this.nextElementSibling)">
+                            <small id="invalid_birt" class="form-text red error_input"> Birthday is required </small>
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="Gender">Gender</label>
+                            <!--drop down -->
+
+                            <select class="form-control" id="Gender" name="gender" onclick="hide_comment(this.nextElementSibling)">
+                            <option class="hidden"  selected disabled> Select</option> <!-- MAKE 2 OPTION-->
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                            <small id="invalid_gender" class="red error_input"> Gender required </small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col-6">
+                            <label for="phone">Phone</label >                      <!--make introduc for num -->
+                    <input type="tel"    placeholder="" class="form-control"  id="phone" name="phone"  onclick="hide_comment(this.nextElementSibling)">
+                 <div id="invalid_phone"  ><small class=" red error_input"> Phone is required </small></div>
+                </div>
+
+                <div class="form-group col-6" >
+                    <label for="Email1">Email address</label>
+                            <input type="email" class="form-control" id="Email1" name="email" aria-describedby="emailHelp" onclick="hide_comment(this.nextElementSibling)">
+                            <small id="invalid_email" class=" red error_input"> Email is required</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <div class="change_password_note"></div>
+                            <label for="password1">Password</label>
+                            <input type="password" class="form-control" id="password1" name="password" onclick="hide_comment(this.nextElementSibling)">
+                            <small id="invalid_pass" class=" red error_input"> Password required </small>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="confirm">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm" name="confirm" onclick="hide_comment(this.nextElementSibling)" />
+                            <small id="invalid_pass2" class="red error_input"> confirm password required</small>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button type="button" class="  btn  btn-block sign_btn " value="sign">Sign Up</button>
+
+                    <hr class="line" />
+                    <div class="text-center sign_color"> have already an account ? <a class="sign_color pl-3" href="log-in.html">
+                    log in
+                </a> </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../js/jquery-3.4.1.min.js">
+</script>
+<script src="../js/bootstrap.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/jquery-ui.js">
+</script>
+<script src="../js/signup.js">
+</script>
+
+</html>

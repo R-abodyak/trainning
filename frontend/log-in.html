@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<style>
+
+</style>
+
+<html>
+
+<head>
+    <title> log-in-form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="	X-UA-Compatible" content="	IE=edge">
+    <!-- for internet explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" href="../css/bootstrap.css">
+    <link rel='stylesheet' type="text/css" href="../css/login.css">
+    <link rel='stylesheet' type="text/css" href="../css/general.css">
+    <script src="../js/jquery-3.4.1.min.js">
+    </script>
+    <script src="../js/bootstrap.min.js">
+    </script>
+
+
+
+</head>
+<!-- rawan-->
+
+<body>
+    <div class=" vertical-center">
+        <div class="container">
+
+
+            <div class="row ">
+                <div class="col-md-4 col-sm-10  offset-md-4 offset-sm-1 offset-sm-1  py-5 mt-5 log_color myformbord">
+                    <form onsubmit="return validateForm();" action="checklogin.php" method="post">
+                        <h1 class="text-center"> Log-In </h1>
+                        <div class="note log_color" id="note"> </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" onclick="hide()">
+                            <small id="invalid_name1" class="form-text  Error"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password" onclick="hide()">
+                            <small id="invalid_name2" class="form-text  Error"></small>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" onclick="showpass()" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">show password</label>
+
+                        </div>
+                        <button type="button" class="log_btn btn btn-block">Log-In</button>
+
+                        <br>
+                        <br>
+                        <hr class="standardborder">
+                        <p class="no-account black "> Don't have an account? <a class="black" href="signup.html">
+                sign up
+            </a> </p>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    $('.log_btn').click(function() {
+
+        var valid = validateForm();
+
+        if (valid) {
+
+            $.ajax({
+                method: "post",
+                url: "../backend/checklogin.php",
+                data: {
+                    email: $('#exampleInputEmail1').val(),
+                    password: $('#exampleInputPassword1').val()
+                },
+
+                success: function(data, status, xhr) {
+
+
+                    if (data == 1) {
+                        $('#note').show();
+                        $('#note').html("invalid email or password");
+                    } else {
+
+                        window.location.href = "profile.html";
+
+                    }
+                },
+                error: function(xhr, status, Error) {
+                    alert("eror in response");
+                    console.log(Error);
+                },
+            });
+        }
+
+
+    });
+
+
+    function validateForm() {
+
+        var email = document.getElementById('exampleInputEmail1').value;
+        var pass = document.getElementById('exampleInputPassword1').value;
+
+        //var rgx =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        var rgx = /^([a-zA_Z0-9\.-]+)\@([a-z0-9]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/;
+        // var rgx=  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        //var rgx = /\S+@\S+\.\S+/;
+        var valid_email = rgx.test(email);
+
+        if (email == '') {
+            document.getElementById("invalid_name1").innerHTML = "you need to enter your email address";
+
+        }
+        if (pass == '') {
+            document.getElementById("invalid_name2").innerHTML = "you need to enter your password";
+            return false
+        }
+        if (!valid_email) {
+
+            document.getElementById("invalid_name1").innerHTML = "invalid email<br>  remember that email should contain @ and valid domain name ";
+            return false;
+        } else {
+
+            return true;
+        }
+    };
+
+    function hide() {
+        document.getElementById("invalid_name1").innerHTML = "";
+        document.getElementById("invalid_name2").innerHTML = "";
+    }
+
+    function showpass() {
+        var qq = document.getElementById("exampleInputPassword1");
+        if (qq.type === "password") {
+            qq.type = "text";
+        } else {
+            qq.type = "password";
+        }
+
+    }
+</script>

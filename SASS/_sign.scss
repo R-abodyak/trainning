@@ -1,0 +1,48 @@
+body,
+html {
+    height: 100%;
+    background: rgba(8, 8, 8, 0.4);
+}
+
+.sign_btn {
+    color: white;
+    font-weight: $font_weight;
+    background-color: $sign_main_color;
+    margin-top: 10pt;
+}
+
+.success {
+    color: #39aa66;
+    font-size: $message_font_size;
+    background-color: #ffffff;
+    font-weight: $font_weight;
+}
+
+.error {
+    font-size: $message_font_size;
+    background-color: #ffffff;
+    font-weight: $font_weight;
+}
+
+.error_input {
+    background-color: #ffffff;
+    font-weight: $font_weight;
+    visibility: hidden;
+}
+
+.atend {
+    padding-top: 4pt;
+    vertical-align: text-bottom;
+}
+
+.custom_container {
+    border-radius: 10px;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 2px 7px #740e30, -3px 2px 7px #740e30;
+}
+
+.line {
+    border: 1px solid #72422a;
+}

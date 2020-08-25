@@ -1,0 +1,36 @@
+.edit_btn1 {
+    color: white;
+    font-size: 16pt;
+    background-color: $profile_outside_color;
+    margin-top: 10pt;
+}
+
+.size_13 {
+    font-size: 13pt;
+}
+
+body {
+    background-color: $profile_outside_color;
+}
+
+.my_card {
+    border: 40px solid $profile_middle_color;
+    /* margin-top: 30pt; */
+    color: #596e79;
+    background-color: $profle_inside_color;
+    box-shadow: 0 0 20px #cd5c16;
+    box-shadow: 0 0 20px black;
+}
+
+.tittle,
+.change_password_note {
+    color: #39aa66;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+.change_password_error {
+    color: #cc2712;
+    font-size: 12pt;
+    font-weight: 700;
+}

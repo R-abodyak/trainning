@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .padding-top-3rem {
     padding-top: 3rem;
 }
@@ -32,4 +33,72 @@
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+=======
+<<<<<<< HEAD
+.padding-top-3rem {
+    padding-top: 3rem;
+}
+
+.red {
+    color: #f0461b;
+}
+
+.sign_color {
+    color: $sign_main_color;
+}
+
+.log_color {
+    color: $log_main_color;
+}
+
+.standardborder {
+    border: 1px solid #020202;
+}
+
+.vertical-center {
+    margin-bottom: 0;
+    min-height: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+=======
+body,
+html {
+    height: 100%;
+}
+
+.success {
+    color: $sucess_color;
+    @include messages;
+}
+
+.error {
+    color: $error_color;
+    @include messages;
+}
+
+.padding-top-3rem {
+    padding-top: 3rem;
+}
+
+.standardborder {
+    border: 1px solid #020202;
+}
+
+.vertical-center {
+    margin-bottom: 0;
+    min-height: 100%;
+    min-height: 100vh;
+    @include flex;
+    @include v_center;
+>>>>>>> 67e4712... modify
+>>>>>>> 42b0b18... modify
 }

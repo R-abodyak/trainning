@@ -1,0 +1,30 @@
+body,
+html {
+    height: 100%;
+}
+
+.success {
+    color: $sucess_color;
+    @include messages;
+}
+
+.error {
+    color: $error_color;
+    @include messages;
+}
+
+.padding-top-3rem {
+    padding-top: 3rem;
+}
+
+.standardborder {
+    border: 1px solid #020202;
+}
+
+.vertical-center {
+    margin-bottom: 0;
+    min-height: 100%;
+    min-height: 100vh;
+    @include flex;
+    @include v_center;
+}

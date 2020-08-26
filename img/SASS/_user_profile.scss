@@ -1,0 +1,28 @@
+.profile_body {
+    background-color: $profile_outside_color;
+    .my_card {
+        border: 40px solid $profile_middle_color;
+        /* margin-top: 30pt; */
+        color: $profile_outside_color;
+        background-color: $profle_inside_color;
+        box-shadow: 0 0 20px $balck;
+        .edit_btn1 {
+            color: $white;
+            font-size: $font_size;
+            background-color: $profile_outside_color;
+            margin-top: 10pt;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        .tittle,
+        .change_password_note {
+            color: $sucess_color;
+            @include messages;
+        }
+        .change_password_error {
+            color: $error_color;
+            @include messages;
+        }
+    }
+}

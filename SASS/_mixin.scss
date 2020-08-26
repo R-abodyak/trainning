@@ -1,0 +1,21 @@
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin v_center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin messages {
+    font-size: $message_font_size;
+    background-color: $main_background_color;
+    font-weight: $font_weight;
+}

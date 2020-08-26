@@ -10,16 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
-<<<<<<< HEAD
-    "gulp-sass": "^4.1.0"
-=======
-<<<<<<< HEAD
-    "gulp-sass": "^4.1.0"
-=======
     "gulp-sass": "^4.1.0",
     "gulp-watch": "^5.0.1",
     "gulp-watch-sass": "^1.4.1"
->>>>>>> 67e4712... modify
->>>>>>> 42b0b18... modify
   }
 }

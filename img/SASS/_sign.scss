@@ -1,0 +1,32 @@
+.sign_body {
+    background: sign_bg_color;
+    .sign_color {
+        color: $sign_main_color;
+    }
+    .custom_container {
+        border-radius: 10px;
+        font-size: $font_size;
+        font-weight: $font_weight;
+        background-color: $main_background_color;
+        box-shadow: 3px 2px 7px$sign_main_color, -3px 2px 7px $sign_main_color;
+    }
+}
+
+.sign_btn {
+    color: $white;
+    font-weight: $font_weight;
+    background-color: $sign_main_color;
+    margin-top: 10pt;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.error_input {
+    @extend .error;
+    visibility: hidden;
+}
+
+.line {
+    border: 1px solid $sign_main_color;
+}

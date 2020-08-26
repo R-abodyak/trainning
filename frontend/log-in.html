@@ -12,8 +12,8 @@
     <!-- for internet explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type="text/css" href="../css/bootstrap.css">
-    <link rel='stylesheet' type="text/css" href="../css/login.css">
-    <link rel='stylesheet' type="text/css" href="../css/general.css">
+
+    <link rel='stylesheet' type="text/css" href="../css/styles.css">
     <script src="../js/jquery-3.4.1.min.js">
     </script>
     <script src="../js/bootstrap.min.js">
@@ -24,11 +24,9 @@
 </head>
 <!-- rawan-->
 
-<body>
+<body class="log_body">
     <div class=" vertical-center">
         <div class="container">
-
-
             <div class="row ">
                 <div class="col-md-4 col-sm-10  offset-md-4 offset-sm-1 offset-sm-1  py-5 mt-5 log_color myformbord">
                     <form onsubmit="return validateForm();" action="checklogin.php" method="post">
@@ -37,12 +35,12 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" onclick="hide()">
-                            <small id="invalid_name1" class="form-text  Error"></small>
+                            <small id="invalid_name1" class="form-text  error"></small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" name="password" onclick="hide()">
-                            <small id="invalid_name2" class="form-text  Error"></small>
+                            <small id="invalid_name2" class="form-text  error"></small>
                         </div>
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" onclick="showpass()" id="exampleCheck1">
@@ -99,9 +97,9 @@
 
                     }
                 },
-                error: function(xhr, status, Error) {
+                error: function(xhr, status, error) {
                     alert("eror in response");
-                    console.log(Error);
+                    console.log(error);
                 },
             });
         }

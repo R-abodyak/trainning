@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-
-
-gulp.task("to_css", function() {
-    return gulp.src("SASS/style.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("css"))
-});
-=======
-<<<<<<< HEAD
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-
-
-gulp.task("to_css", function() {
-    return gulp.src("SASS/style.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("css"))
-});
-=======
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var watch = require("gulp-watch");
@@ -41,5 +19,3 @@ gulp.task("sass:watch", () => watchSass([
     ])
     .pipe(sass())
     .pipe(gulp.dest("./css")));*/
->>>>>>> 67e4712... modify
->>>>>>> 42b0b18... modify

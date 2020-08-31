@@ -156,3 +156,20 @@ jQuery(document).ready(function() {
         showAnim: "fold"
     })
 });
+
+$(document).ready(function() {
+    // no way succesed to put confirm password in same line so lets have only confirm :))
+    if (screen.width < 400) {
+        $("#phone_text").html("Confirm");
+    } else {
+        $("#phone_text").html("Confirm password");
+    }
+
+});
+$(window).resize(function() {
+    if (screen.width < 400) {
+        $("#phone_text").html("Confirm");
+    } else {
+        $("#phone_text").html("Confirm password");
+    }
+});

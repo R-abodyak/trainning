@@ -13,83 +13,85 @@
 </head>
 
 <body class="sign_body">
-    <div class="container padding-top-3rem">
-        <div class="row ">
-            <div class="col-md-6 col-sm-10  offset-md-3 offset-sm-1    py-5 px-5 sign_color custom_container">
-                <form id="sign_form">
-                    <h1 class="text-center pb-4"> Sign Up </h1>
+    <div class=" vertical-center">
+        <div class="container padding-top-3rem">
+            <div class="row ">
+                <div class="col-lg-6 col-md-8 col-10  offset-lg-3 offset-md-2 offset-1    py-5 px-5 sign_color custom_container">
+                    <form id="sign_form">
+                        <h1 class="text-center pb-4"> Sign Up </h1>
 
-                    <div class="success text-center m-2" id="sucesse_message"> </div>
-                    <div class="error  text-center m-2 pb-3" id="erorr_message"> </div>
-                    <div class="row ">
-                        <div class="form-group col-6">
-                            <label for="first_name">First Name   </label>
-                            <input type="text" class="form-control" id="first_name" name="first">
+                        <div class="success text-center m-2" id="sucesse_message"> </div>
+                        <div class="error  text-center m-2 pb-3" id="erorr_message"> </div>
+                        <div class="row ">
+                            <div class="form-group col-6">
+                                <label for="first_name">First Name   </label>
+                                <input type="text" class="form-control" id="first_name" name="first">
+                            </div>
+
+                            <div class="form-group col-6">
+                                <label for="last_name">Last Name </label>
+                                <input type="text" class="form-control" id="last_name" name="last">
+                            </div>
                         </div>
 
-                        <div class="form-group col-6">
-                            <label for="last_name">Last Name </label>
-                            <input type="text" class="form-control" id="last_name" name="last">
-                        </div>
-                    </div>
+                        <div class="row ">
+                            <div class="form-group col-6">
+                                <label for="birthday">Birthday</label>
+                                <input class="form-control" id="birthday" autocomplete="off" name="birthday" placeholder="enter to select date">
+                            </div>
 
-                    <div class="row ">
-                        <div class="form-group col-6">
-                            <label for="birthday">Birthday</label>
-                            <input class="form-control" id="birthday" autocomplete="off" name="birthday" PLACEHOLDER="enter to select date">
-                        </div>
-
-                        <div class="form-group col-6">
-                            <label for="Gender">Gender</label>
-                            <!--drop down -->
-                            <select class="form-control" id="Gender" name="gender">
-                            <option class="hidden"  selected disabled> Select</option> <!-- MAKE 2 OPTION-->
+                            <div class="form-group col-6">
+                                <label for="Gender">Gender</label>
+                                <!--drop down -->
+                                <select class="form-control" id="Gender" name="gender">
+                            <option class="hidden "  selected disabled>  Select</div></option> <!-- MAKE 2 OPTION-->
                             <option>Male</option>
                             <option>Female</option>
                         </select>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
+                        <div class="row">
 
-                        <div class="form-group col-6">
-                            <label for="phone">Phone</label >                      <!--make introduc for num -->
+                            <div class="form-group col-6">
+                                <label for="phone">Phone</label >                      <!--make introduc for num -->
                     <input type="tel"    placeholder="" class="form-control"  id="phone" name="phone" >
   
                 </div>
 
                 <div class="form-group col-6" >
                     <label for="Email1">Email address</label>
-                            <input type="email" class="form-control" id="Email1" name="email" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="Email1" name="email" aria-describedby="emailHelp">
 
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="form-group col-6">
-                            <div class="change_password_note"></div>
-                            <label for="password1">Password</label>
-                            <input type="password" class="form-control" id="password1" name="password">
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <div class="change_password_note"></div>
+                                <label for="password1">Password</label>
+                                <input type="password" class="form-control" id="password1" name="password">
 
+                            </div>
+                            <div class="form-group custom_font_phone col-6">
+                                <label for="confirm" id="phone_text">Confirm Password</label>
+                                <input type="password" class="form-control " id="confirm" name="confirm" />
+
+                            </div>
                         </div>
-                        <div class="form-group col-6">
-                            <label for="confirm">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirm" name="confirm" />
-
-                        </div>
-                    </div>
 
 
 
 
 
-                    <input type="submit" class="  btn  btn-block sign_btn " value="submit" />
+                        <input type="submit" class="  btn  btn-block sign_btn " value="submit" />
 
-                    <hr class="line" />
-                    <div class="text-center sign_color"> have already an account ? <a class="sign_color pl-3" href="log-in.html">
+                        <hr class="line" />
+                        <div class="text-center sign_color"> have already an account ? <a class="sign_color pl-3" href="log-in.html">
                     log in
                 </a> </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

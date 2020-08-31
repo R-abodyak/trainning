@@ -30,3 +30,25 @@
 .line {
     border: 1px solid $sign_main_color;
 }
+
+@media only screen and (max-width: 770px) {
+    .sign_body {
+        .custom_container {
+            font-size: $font_size + -2;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .sign_body {
+        .custom_container {
+            font-size: $font_size + -6;
+        }
+    }
+     ::placeholder {
+        font-size: $font_size + -7
+    }
+    .form-control {
+        font-size: $font_size + -7;
+    }
+}

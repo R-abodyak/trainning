@@ -1,5 +1,7 @@
 .log_body {
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-image: url("https://img.wallpapersafari.com/desktop/1600/900/39/18/LDKrY3.jpg");
 }
 
@@ -40,4 +42,10 @@
 
 .log_color {
     color: $log_main_color;
+}
+
+@media only screen and (max-width: 400px) {
+    .myformbord {
+        font-size: $font_size + -2;
+    }
 }

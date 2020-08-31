@@ -36,7 +36,9 @@ html {
   align-items: center; }
 
 .log_body {
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-image: url("https://img.wallpapersafari.com/desktop/1600/900/39/18/LDKrY3.jpg"); }
 
 .myformbord {
@@ -71,6 +73,10 @@ html {
 .log_color {
   color: #5e0961; }
 
+@media only screen and (max-width: 400px) {
+  .myformbord {
+    font-size: 13pt; } }
+
 .sign_body {
   background-color: #6d696b; }
   .sign_body .sign_color {
@@ -95,6 +101,18 @@ html {
 
 .line {
   border: 1px solid #9e0b61; }
+
+@media only screen and (max-width: 770px) {
+  .sign_body .custom_container {
+    font-size: 13pt; } }
+
+@media (max-width: 400px) {
+  .sign_body .custom_container {
+    font-size: 9pt; }
+  ::placeholder {
+    font-size: 8pt; }
+  .form-control {
+    font-size: 8pt; } }
 
 .profile_body {
   background-color: #596e79; }

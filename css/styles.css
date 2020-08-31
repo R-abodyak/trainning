@@ -4,13 +4,13 @@ html {
 
 .success {
   color: #269442;
-  font-size: 12pt;
+  font-size: 14pt;
   background-color: #fff;
   font-weight: 600; }
 
 .error, .error_input {
   color: #da1515;
-  font-size: 12pt;
+  font-size: 14pt;
   background-color: #fff;
   font-weight: 600; }
 
@@ -40,7 +40,7 @@ html {
   background-image: url("https://img.wallpapersafari.com/desktop/1600/900/39/18/LDKrY3.jpg"); }
 
 .myformbord {
-  border-radius: 12pt;
+  border-radius: 14pt;
   font-size: 15pt;
   font-weight: 600;
   background-color: #fff;
@@ -72,7 +72,7 @@ html {
   color: #5e0961; }
 
 .sign_body {
-  background: sign_bg_color; }
+  background-color: #6d696b; }
   .sign_body .sign_color {
     color: #9e0b61; }
   .sign_body .custom_container {
@@ -111,14 +111,14 @@ html {
       margin-top: 10pt; }
       .profile_body .my_card .edit_btn1:hover {
         opacity: 0.7; }
-    .profile_body .my_card .tittle,
-    .profile_body .my_card .change_password_note {
-      color: #269442;
-      font-size: 12pt;
-      background-color: #fff;
-      font-weight: 600; }
-    .profile_body .my_card .change_password_error {
-      color: #da1515;
-      font-size: 12pt;
-      background-color: #fff;
-      font-weight: 600; }
+  .profile_body .tittle,
+  .profile_body .change_password_note {
+    color: #269442;
+    font-size: 14pt;
+    background-color: #fff;
+    font-weight: 600; }
+  .profile_body .change_password_error {
+    color: #da1515;
+    font-size: 14pt;
+    background-color: #fff;
+    font-weight: 600; }
